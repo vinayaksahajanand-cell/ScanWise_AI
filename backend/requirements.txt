@@ -1,0 +1,29 @@
+# --- API ---
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+pydantic>=2.8
+pydantic-settings>=2.4
+httpx>=0.27
+
+# --- Persistence ---
+sqlalchemy>=2.0.30
+alembic>=1.13
+
+# --- Imaging / PDF / OCR ---
+numpy>=1.26
+# OpenCV 5.x DLLs are blocked by Windows Smart App Control on some machines; 4.x is stable.
+opencv-python-headless>=4.10,<5
+pillow>=10.4
+pillow-heif>=0.18
+pymupdf>=1.24
+# RapidOCR runs PaddleOCR's PP-OCR detection/recognition models on ONNX Runtime
+# (same model family as PaddleOCR, far lighter to install). It pulls in opencv-python.
+rapidocr>=3.0
+onnxruntime>=1.18
+
+# --- Matching / dates / exports ---
+rapidfuzz>=3.9
+python-dateutil>=2.9
+openpyxl>=3.1
+reportlab>=4.2

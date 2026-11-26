@@ -1,0 +1,2 @@
+# PostgreSQL driver (used by docker-compose; SQLite needs nothing extra)
+psycopg[binary]>=3.2
